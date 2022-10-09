@@ -1,13 +1,14 @@
 const express = require('express');
 const app = express();
 const http = require('http');
-const server = http.createServer(app);
-
+var path = require('path');
+require('dotenv').config();
 const { Server } = require('socket.io');
+
+const server = http.createServer(app);
 const io = new Server(server);
 
-const hostname = '127.0.0.1';
-const port = 3000;
+app.use(express.static(path.join(__dirname, 'assets'))); //  "public" off of current is root
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
@@ -25,7 +26,7 @@ io.on('connection', (socket) => {
     });
 });
 
-server.listen(3000, hostname,() => {
-    console.log("server started on", hostname, port);
+server.listen(process.env.PORT, process.env.HOSTNAME,() => {
+    console.log("server started on", process.env.HOSTNAME, process.env.PORT);
 });
 
