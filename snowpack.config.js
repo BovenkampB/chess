@@ -4,11 +4,9 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   //Just needed for snowpack build so that it minifies
-  experiments: {
     optimize: {
       bundle: true,
-      minify: true,
-    },
+      minify: true
   },
   mount: {
     /* ... */
