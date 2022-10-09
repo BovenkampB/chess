@@ -14,18 +14,7 @@ Initial thought will be to use observer pattern to let everyone conenct to each 
 for the chess board we will make use of the factory pattern
 
 but hopefully we can use another pattern somewhere else to be discovered.
-## installation
-Make sure to run Node JS 12.18.2 -> I would recommend to install nvm to manage multiple Node JS versions this way you can install the new Node JS version easily with: 
 
-    $ nvm install 12.18.2 
-    $ nvm use 12.18.2 
-
-same goes for Java 11, I would recommend installing Jenv for Windows 
-(or probably Jenv for Linux/MacOS but haven't used this.. "$ brew install jenv")
-
-    $ jenv add jdk11 {pathToJava11}
-    $ jenv change jdk11
-    $ npm install
 ## starting
 **Running with Express JS**
 
@@ -39,3 +28,17 @@ same goes for Java 11, I would recommend installing Jenv for Windows
 
     $ npx snowpack init (once)
     $ npx run dev
+## installation
+    $ npm install
+Make sure to run Node JS 12.18.2 and Java 11
+
+#### general recommendations
+For this I would generally recommend 
+to install nvm to manage multiple Node JS versions this way you can install the new Node JS version easily.
+same goes for Java 11, I would recommend installing Jenv for Windows
+(or probably Jenv for Linux/MacOS but haven't used this.. "$ brew install jenv")
+
+    $ nvm install 12.18.2 
+    $ nvm use 12.18.2
+    $ jenv add jdk11 {pathToJava11}
+    $ jenv change jdk11
