@@ -33,5 +33,5 @@ same goes for Java 11, I would recommend installing Jenv for Windows
 
 **Running with native Node JS**
 
-    $ node app.js
+    $ node app(NodeJS without ExpressJS).js
 
