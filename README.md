@@ -35,3 +35,7 @@ same goes for Java 11, I would recommend installing Jenv for Windows
 
     $ node app(NodeJS without ExpressJS).js
 
+**frontend build tool - snowpack**
+
+    $ npx snowpack init (once)
+    $ npx run dev
