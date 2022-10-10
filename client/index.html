@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Socket.IO chat</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" type="module"></script>
+
     <style>
         body {
             margin: 0;
@@ -58,16 +62,15 @@
             background: #efefef;
         }
     </style>
+
+    <title>Chatten</title>
+
 </head>
 <body>
-<ul id="messages"></ul>
+<div id="message-container"></div>
 <form id="form" action="">
     <input id="input" autocomplete="off"/>
     <button>Send</button>
 </form>
-
-<script src="/socket.io/socket.io.js"></script>
-<script src="/js/chat.js"></script>
-
 </body>
 </html>

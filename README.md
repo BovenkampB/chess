@@ -16,18 +16,15 @@ for the chess board we will make use of the factory pattern
 but hopefully we can use another pattern somewhere else to be discovered.
 
 ## starting
-**Running with Express JS**
 
-    $ node index.js
+**run server**
 
-**Running with native Node JS**
+    $ nodemon server.js / $ npm run dev
 
-    $ node app(NodeJS without ExpressJS).js
-
-**frontend build tool - snowpack**
+**run client**
 
     $ npx snowpack init (once)
-    $ npx run dev
+    $ npm run dev
 ## installation
     $ npm install
 Make sure to run Node JS 12.18.2 and Java 11

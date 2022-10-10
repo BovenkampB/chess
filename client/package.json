@@ -2,9 +2,9 @@
   "name": "chess",
   "version": "1.0.0",
   "description": "Node js chess app",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
-    "start": "snowpack dev",
+    "dev": "snowpack dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "snowpack build"
   },
@@ -13,13 +13,9 @@
   ],
   "author": "Bart van de Bovenkamp",
   "license": "ISC",
-  "dependencies": {
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "socket.io": "^4.5.2",
-    "socket.io-client": "^4.5.2"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "snowpack": "^3.8.8"
+    "snowpack": "^3.8.8",
+    "socket.io-client": "^4.5.2"
   }
 }
