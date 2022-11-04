@@ -19,7 +19,7 @@ but hopefully we can use another pattern somewhere else to be discovered.
 
 **run server**
 
-    $ nodemon server.js / $ npm run dev
+    $ npm run dev
 
 **run client**
 

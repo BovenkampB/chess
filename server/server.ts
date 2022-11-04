@@ -9,6 +9,11 @@ const io = require("socket.io")(process.env.PORT, {
 io.on("connection", socket => {
     console.log(socket.id);
 
+
+    socket.on('set-username', (username) => {
+        //check socket api to set a custom property "username"
+    });
+
     socket.on('send-message', (msg) => {
         socket.broadcast.emit("receive-message", msg, socket.id); // everyone gets it but the sender
     });
@@ -22,4 +27,3 @@ io.on("connection", socket => {
         console.log(number, string, obj);
     })
 });
-
