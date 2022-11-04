@@ -20,22 +20,32 @@ const io = require("socket.io")(process.env.PORT, {
 // });
 
 io.on("connection", socket => {
-    console.log(socket.id);
+    console.log("user connected: " + socket.id);
 
-    socket.on('send-message', (msg) => {
-        console.log("Message: " + msg);
-        socket.broadcast.emit("receive-message", msg); // everyone gets it but the sender
+    socket.emit("prompt-username", (response) => {
+        console.log(response);
+        socket.data.username = response;
     });
 
-    console.log('a user connected');
+    // socket.on('rename', (name) => {
+    //     socket.data.username = name;
+    // })
+
+    socket.on('send-message', (msg) => {
+        console.log(socket.data.username + msg);
+        socket.broadcast.emit("receive-message", socket.data.username, msg); // everyone gets it but the sender
+    });
+
     socket.on('disconnect', () => {
-        console.log('user disconnected');
+        console.log(socket.data.username + ' disconnected');
+        socket.broadcast.emit('receive-message', socket.data.username, " has left the chat.");
     });
 
     socket.on('custom-event', (number, string, obj) => {
         console.log(number, string, obj);
     })
 });
+
 
 // server.listen(process.env.PORT, process.env.HOSTNAME,() => {
 //     console.log("server started on", process.env.HOSTNAME, process.env.PORT);

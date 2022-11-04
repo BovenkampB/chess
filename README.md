@@ -19,13 +19,14 @@ but hopefully we can use another pattern somewhere else to be discovered.
 
 **run server**
 
-    $ nodemon server.js / $ npm run dev
-
+    $ cd server
+    $ npm run dev
 **run client**
 
-    $ npx snowpack init (once)
+    $ cd client
     $ npm run dev
 ## installation
+    $ npx snowpack init (once on client)
     $ npm install
 Make sure to run Node JS 12.18.2 and Java 11
 
